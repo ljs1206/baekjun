@@ -10,10 +10,10 @@ void dfs(int x, int y, vector<vector<int>>& arr) {
 	arr[x][y] = 0;
 
 	for (int n = 0; n < 4; n++) {
-		int r = x + dx[n];
-		int c = y + dy[n];
-		if (r >= 0 && r < arr.size() && c >= 0 && c < arr[0].size() && arr[r][c] == 1) {
-			dfs(r, c, arr);
+		int nx = x + dx[n];
+		int ny = y + dy[n];
+		if (nx >= 0 && nx < arr.size() && ny >= 0 && ny < arr[0].size() && arr[nx][ny] == 1) {
+			dfs(nx, ny, arr);
 		}
 	}
 }
@@ -48,6 +48,5 @@ int main() {
 		}
 
 		cout << count << "\n";
-
 	}
 }
